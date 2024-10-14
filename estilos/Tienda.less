@@ -1,0 +1,268 @@
+// Colores
+@primary-color: rgb(1, 98, 60); 
+@link-color: red; 
+@text-color: white; 
+@header-bg-color: @primary-color; 
+@footer-bg-color: @primary-color; 
+@footer-text-color: white; 
+@logo-url: 'https://www.molitalia.com.pe/wp-content/uploads/2020/09/Logo.png' ;
+@product1: 'https://www.molitalia.com.pe/wp-content/uploads/2020/09/3D-MOLITALIA-SPAGHETTI-1KG_FB.jpg'; 
+@product2: 'https://www.molitalia.com.pe/wp-content/uploads/2020/09/dummie-sixpack-frac-clasica-427x427px-web-1.jpg'; 
+@product3: 'https://www.molitalia.com.pe/wp-content/uploads/2020/09/dummie-env-queso-crackelet-47g-427x427-px-web.jpg'; 
+@product4: 'https://www.molitalia.com.pe/wp-content/uploads/2020/09/3-Ositos-Avena-Cereales-Andinos-170-g-3D.jpg';
+@product5: 'https://www.molitalia.com.pe/wp-content/uploads/2020/09/427x427-estuche-cereal-bar-durazno.jpg';
+@product6: 'https://www.molitalia.com.pe/wp-content/uploads/2020/09/3D-MOLITALIA-SPAGHETTI-1KG_FB.jpg';
+@product7: 'https://www.molitalia.com.pe/wp-content/uploads/2020/09/3D-MOLITALIA-SPAGHETTI-1KG_FB.jpg';
+@product8: 'https://www.molitalia.com.pe/wp-content/uploads/2020/09/3-Ositos-Avena-Cereales-Andinos-170-g-3D.jpg';
+@product9: 'https://www.molitalia.com.pe/wp-content/uploads/2020/09/3D-MOLITALIA-SPAGHETTI-1KG_FB.jpg';
+@product10: 'https://www.molitalia.com.pe/wp-content/uploads/2020/09/427x427-estuche-cereal-bar-durazno.jpg';
+
+
+
+body {
+    overflow-x: hidden;
+    font-family: 'Poppins';
+    margin: 0;
+    background-color: #f5f5f5;
+  }
+
+header {
+    background-color: @header-bg-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 2.5%;
+
+    img {
+        margin-top: 1%;
+        content: url(@logo-url);
+    }
+
+    .cart {
+        align-self: center;
+
+        a {
+            color: @text-color;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    }
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+
+    select {
+        padding: 10px;
+        border: 1px solid @primary-color;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    input {
+        width: 50%;
+        padding: 10px;
+        border: 1px solid @primary-color;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: @primary-color;
+        color: @text-color;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+nav {
+    background-color: @header-bg-color;
+
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        flex-wrap: wrap;
+
+        li {
+            padding: .3rem 1rem;
+            color: @text-color;
+            font-size: 18px;
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            a:hover {
+                color: @link-color;
+            }
+        }
+    }
+}
+
+.productos {
+    padding: 40px;
+    text-align: center;
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        justify-items: center;
+
+        article {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            padding: 20px;
+            text-align: center;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            figure {
+                margin: 0;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 10px;
+                    max-width: 200px;
+                }
+
+                figcaption {
+                    margin-top: 15px;
+
+                    h2 {
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                        color: @primary-color;
+                        font-weight: bold;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: @link-color;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        article:nth-child(1) img {
+            content: url(@product1);
+        }
+        article:nth-child(2) img {
+            content: url(@product2);
+        }
+        article:nth-child(3) img {
+            content: url(@product3);
+        }
+        article:nth-child(4) img {
+            content: url(@product4);
+        }
+        article:nth-child(5) img {
+            content: url(@product5);
+        }
+        article:nth-child(6) img {
+            content: url(@product6);
+        }
+        article:nth-child(7) img {
+            content: url(@product7);
+        }
+        article:nth-child(8) img {
+            content: url(@product8);
+        }
+        article:nth-child(9) img {
+            content: url(@product9);
+        }
+        article:nth-child(10) img {
+            content: url(@product10);
+        }
+    }
+}
+
+footer {
+    background-color: @footer-bg-color;
+    color: @footer-text-color;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1rem;
+    flex-wrap: wrap;
+
+    img {
+        width: 100px;
+        margin: 0 2rem;
+    }
+
+    h4 {
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            font-size: 16px;
+            margin-bottom: 0.5rem;
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+    }
+
+    .footer-column {
+        flex: 1 0 20%;
+        min-width: 150px;
+    }
+}
+
+#add-to-cart {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition-duration: 1s;
+    font-size: 16px;
+}
+
+#Texto-movimiento {
+    font-size: 36px;
+    margin-bottom: 30px;
+    position: absolute;
+    white-space: nowrap;
+    animation: move 10s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -100%;
+    }
+}
