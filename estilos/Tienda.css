@@ -207,16 +207,21 @@ footer .footer-column {
 
 #Texto-movimiento {
   font-size: 36px;
-  margin-bottom: 30px;
   position: absolute;
   white-space: nowrap;
-  animation: move 10s linear infinite;
+  animation: move 13s linear infinite;
+  left: 0; 
 }
+
 @keyframes move {
   0% {
-    left: 100%;
+    left: 0%; /* Comienza en el borde izquierdo */
+  }
+  50% {
+    left: 57%; 
   }
   100% {
-    left: -100%;
+    left: 0%; /* Regresa al borde izquierdo */
   }
 }
+
