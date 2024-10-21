@@ -14,7 +14,16 @@
   background-image: url('https://www.molitalia.com.pe/wp-content/uploads/2021/09/427x427-SC-Pack-todinno-cioccolato-2021.jpg');
 }
 .product:nth-child(6) figure {
-  background-image: url('https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/tottusPE/40378811_1/w=1500,h=1500,fit=pad');
+  background-image: url('https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/tottusPE/40378811_1/public');
+}
+.product:nth-child(7) figure {
+  background-image: url('https://vivanda.vtexassets.com/arquivos/ids/458622/20140687.jpg?v=638310528759100000');
+}
+.product:nth-child(8) figure {
+  background-image: url('https://res.cloudinary.com/riqra/image/upload/w_240,h_240,c_limit,q_auto,f_auto/v1715371616/sellers/tienda-molitalia-tus-productos-favoritos-al-mejor-precio/products/hqj9vftiryarai4nltbq.jpg');
+}
+.product:nth-child(9) figure {
+  background-image: url('https://res.cloudinary.com/riqra/image/upload/v1707495088/sellers/tienda-molitalia-tus-productos-favoritos-al-mejor-precio/products/gtyz3foupvuogj58t1mk.jpg');
 }
 figure {
   width: 100%;
