@@ -2,8 +2,12 @@
 @red: #DB3741;
 @white: white;
 @gris: #f4f4f4;
-@logo:url(../imagenes/logo.png);
-@gristransparente:rgba(255, 255, 255, 0.514);
+@logo: url(../imagenes/logo.png);
+@alimentos: url(../imagenes/alimentos.png);
+@confites: url(../imagenes/confites.png);
+@mascotas: url(../imagenes/mascotas.png);
+@panetones: url(../imagenes/panetones.jpg);
+@gristransparente: rgba(255, 255, 255, 0.514);
 
 * {
     padding: 0;
@@ -20,18 +24,18 @@ header {
     justify-content: center;
     align-items: center;
     max-width: 100%;
-    
+
     .logo {
-        background-image:@logo;
+        background-image: @logo;
         width: 250px;
         margin-top: 20px;
         margin-top: 20px;
         height: 50px;
-        background-size:contain;
+        background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
     }
-    
+
 }
 
 
@@ -54,17 +58,23 @@ nav {
             text-align: center;
             color: @white;
             font-size: 18px;
-            margin: 1% 30px;
+            margin: 1% 30px;            
 
+
+            
             a {
                 text-decoration: none;
-                color: inherit;
+                color: inherit;                              
             }
 
             a:hover {
                 color: @red;
-                text-shadow: 4px 4px 4px @red;
-
+                text-shadow: -6px -6px 4px black;
+                font-weight: bolder;
+                font-size: 22px;
+                text-decoration-line: underline;
+                text-decoration-style: solid;
+                
             }
 
 
@@ -82,7 +92,7 @@ nav {
 
     .text-content,
     .video-content {
-        padding: 20px;
+        padding: 20px;      
 
         &.text-content {
             max-width: 50%;
@@ -107,29 +117,92 @@ h1 {
     filter: grayscale(100%) invert(92%) contrast(93%);
     margin-bottom: 0;
     margin-top: 70px;
+   overflow: hidden;
+    transition: transform 0.5s ease; 
     max-width: 100%;
+}
+
+.map:hover {
+    filter: none;
+    transform: scale(1.5); /* Aumenta el tamaño ligeramente en hover */
 }
 
 .category-menu {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     background-color: @gris;
+    max-width: 100%;
     padding: 20px 0;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin: 5% 0;    
+    
 
+    
     article {
         text-align: center;
-        position: relative; /* Necesario para la animación en movimiento */
+        position: relative;
+        max-width: 100%;
+        margin: 10px 0;
+        /* Necesario para la animación en movimiento */
 
-        img {
-            width: 100%;
+        .img1 {
+            background-image: @alimentos ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 350px;            
             max-width: 90%;
             height: 200px;
             padding: 15px;
             filter: grayscale(100%);
             border-radius: 20px;
-            transition: transform 0.3s ease; /* Transición suave para el hover */
+            transition: transform 0.3s ease;
+            /* Transición suave para el hover */
+        }
+
+        .img2 {
+            background-image: @confites ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 350px;
+            max-width: 90%;
+            height: 200px;
+            padding: 15px;
+            filter: grayscale(100%);
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+            /* Transición suave para el hover */
+        }
+
+        .img3 {
+            background-image: @mascotas ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 350px;
+            max-width: 90%;
+            height: 200px;
+            padding: 15px;
+            filter: grayscale(100%);
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+            /* Transición suave para el hover */
+        }
+
+        .img4 {
+            background-image: @panetones ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 350px;
+            max-width: 90%;
+            height: 200px;
+            padding: 15px;
+            filter: grayscale(100%);
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+            /* Transición suave para el hover */
         }
 
         figcaption {
@@ -151,65 +224,93 @@ h1 {
     }
 }
 
-/* Animación de izquierda a derecha y viceversa */
 @keyframes go-left-right {
     0% {
-        transform: translateX(-30px); /* Comienza en la posición original (izquierda) */
+        transform: translateX(-30px);
     }
-    
+
     50% {
-        transform: translateX(30px); /* Desplaza la imagen a la derecha */
+        transform: translateX(30px);
+    }
+
+    100% {
+        transform: translateX(-30px);
+    }
+}
+
+@keyframes cambioColor {
+    0% {
+        color: @verde;
     }
     100% {
-        transform: translateX(-30px); /* Vuelve a la posición inicial (izquierda) */
+        color: @red;
     }
 }
 
-.category-menu{
+.category-menu {
+   
+    article:hover {
 
-/* Aplicar la animación al hacer hover sobre el artículo */
-article:hover {
-    img {
-        animation: go-left-right 2s linear infinite; /* Animación de ida y vuelta con 2 segundos de duración */
-        filter: none; /* Eliminar filtro gris al hacer hover */
-    }
+        transform: skew(0deg, -3deg);
 
-    h2 {
-        font-size: 22px; /* Aumenta el tamaño del título */
-    }
+        img,
+        .img1,
+        .img2,
+        .img3,
+        .img4 {
+            animation: go-left-right 2s linear infinite;            
+            filter: none;
+            box-shadow: -5px -5px 7px rgba(0, 0, 0, 0.3);            
+        }
 
-    a {
-        color: @verde; /* Cambiar color del enlace */
-        text-shadow: -2px -2px 6px @verde; /* Sombra en el texto */
-        font-size: 22px; /* Aumentar tamaño del enlace */
+        h2 {
+            font-size: 22px;
+            font-weight: bolder;
+            text-shadow: -3px -3px 4px gray; 
+            animation: cambioColor 1s infinite alternate;
+        }
+
+        a {
+            color: @verde;            
+            text-shadow: -3px -3px 7px @verde;            
+            font-size: 22px;            
+        }
     }
 }
-}
 
 
 
-.sostenibilidad{
+.sostenibilidad {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra el contenido verticalmente */
     margin: 70px 0px;
     padding: 60px 150px;
+    height: 500px;
     background-image: url(../imagenes/trigo.jpg);
     background-position: center;
-    background-size:  cover;
-    background-repeat:  no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 
-    p{
+
+    p {
         background-color: @gristransparente;
         color: @verde;
         font-size: 32px;
         text-align: center;
-        padding: 20px; 
+        padding: 20px;
         font-weight: bold;
-    
-        &.texto{
+        width: 1200px;
+        max-width: 100%;       
+
+        &.texto {
             font-size: 20px;
         }
     }
-    
+
 }
 
 footer {
@@ -222,12 +323,10 @@ footer {
     flex-wrap: wrap;
     margin-top: 0;
 
-    img {
-        width: 100px;
-        margin: 0 2rem;
-    }
+
 
     h4 {
+        font-size: 20px;
         margin: 0 0 1rem 0;
     }
 
@@ -253,17 +352,30 @@ footer {
         margin: 0.5rem;
         min-width: 150px;
         padding: 0 10px;
+
+        .img-footer {
+            background-image: @logo;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 150px;
+            height: 150px;
+            margin: 0 2rem;
+        }
     }
+
+
+   
 }
 
 @media screen and (max-width: 600px) {
-.category-menu{
-    article{
-        img{
-            height: 100px;
+    .category-menu {
+        article {
+            img {
+                height: 100px;
+            }
         }
     }
-}
 
     nav {
         ul {
