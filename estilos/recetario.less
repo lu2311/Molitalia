@@ -510,6 +510,7 @@ footer {
     font-size: 20px;
     background-color: @verde;
     filter: opacity(.9);
+    border: 4px dotted @white;
     color: white;
 }
 
@@ -538,12 +539,10 @@ footer {
     margin: auto 10px;
 }
 
-.corazones span:hover {
+.corazon-brillante {
     color: crimson;
-}
-
-.corazones .seleccionado {
-    color: crimson;
+    transition: box-shadow 0.3s ease;
+    text-shadow: 0 0 2px crimson, 0 0 5px crimson, 0 0 15px crimson; /* Efecto de brillo */
 }
 
 @media screen and (max-width: 800px) {
