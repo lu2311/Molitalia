@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet/less" type="text/css" href="estilos/recetario.less">
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1/dist/less.min.js"></script>
+    <title>Recetario | Molitalia</title>
+</head>
+
+<body>
+
+    <header>
+        <section class="logo">
+
+        </section>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="recetario.html">Recetario</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <section class="seleccion-recetas">
+        <img class="santa-claus" src="imagenes/santa-claus.png" alt="">
+        <h2>Selecciona una de nuestras recetas para ti 😊</h2>
+        <section class="recetas">
+            <article class="receta-miniatura1" onclick="mostrarReceta('Galletas Navideñas de Mantequilla')">
+                <p>Galletas Navideñas de Mantequilla</p>
+            </article>
+            <article class="receta-miniatura2" onclick="mostrarReceta('Trufas de Chocolate Navideñas')">
+                <p>Trufas de Chocolate Navideñas</p>
+            </article>
+            <article class="receta-miniatura3" onclick="mostrarReceta('Panettone Casero')">
+                <p>Panettone Casero</p>
+            </article>
+            <article class="receta-miniatura4" onclick="mostrarReceta('Rollo de Chocolate con Crema de Avellanas')">
+                <p>Rollo de Chocolate y Avellanas</p>
+            </article>
+        </section>
+    </section>
+
+    <aside id="receta-seleccionada" class="ocultar">
+        <h2 id="titulo-receta">Título de la receta seleccionada</h2>
+        <section class="receta-encabezado">
+            <img id="imagen-receta" src="" alt="Imagen de la receta" class="imagen-receta">
+            <aside>
+                <article>
+                    <p>Dificultad</p>
+                    <i class="fa-solid fa-kitchen-set"></i>
+                    <span id="dificultad">Dificultad</span>
+                </article>
+                <article>
+                    <p>Porciones</p>
+                    <i class="fa-solid fa-utensils"></i>
+                    <span id="porciones">Porciones</span>
+                </article>
+                <article>
+                    <p>Tiempo</p>
+                    <i class="fa-solid fa-clock"></i>
+                    <span id="duracion">Duración</span>
+                </article>
+            </aside>
+        </section>
+        <section class="receta-cuerpo">
+            <aside id="ingredientes">
+                <h3>Ingredientes</h3>
+                <ul id="lista-ingredientes">
+                </ul>
+                <a class="btn-tienda" href="tienda.html">Ir a la tienda</a>
+            </aside>
+            <section class="receta-cuerpo2">
+                <aside id="preparacion">
+                    <h3>Preparación</h3>
+                    <section class="pasos">
+                        <button onclick="mostrarPaso(1)">1</button>
+                        <button onclick="mostrarPaso(2)">2</button>
+                        <button onclick="mostrarPaso(3)">3</button>
+                        <button onclick="mostrarPaso(4)">4</button>
+                        <button onclick="mostrarPaso(5)">5</button>
+                    </section>
+                    <article class="paso-seleccionado" id="paso-seleccionado">
+                        <p>Selecciona un paso 😊</p>
+                    </article>
+                </aside>
+
+                <section class="calificacion">
+                    <h3>Califica esta receta</h3>
+                    <aside class="corazones">
+                        <span class="corazon" data-corazon="1">❤</span>
+                        <span class="corazon" data-corazon="2">❤</span>
+                        <span class="corazon" data-corazon="3">❤</span>
+                        <span class="corazon" data-corazon="4">❤</span>
+                        <span class="corazon" data-corazon="5">❤</span>
+                    </aside>
+                </section>
+            </section>
+        </section>
+    </aside>
+
+    <hr>
+
+    <footer>
+        <nav class="footer-column">
+            <img src="https://www.molitalia.com.pe/wp-content/uploads/2020/09/Logo.png" alt="Logo Molitalia">
+        </nav>
+
+        <section class="footer-column">
+            <h4>Categorías</h4>
+            <ul>
+                <li><a href="#">Alimentos</a></li>
+                <li><a href="#">Confites</a></li>
+                <li><a href="#">Perros</a></li>
+                <li><a href="#">Panetones y postres</a></li>
+                <li><a href="#">Venta Interna</a></li>
+                <li><a href="#">Línea étnica</a></li>
+            </ul>
+        </section>
+
+        <section class="footer-column">
+            <h4>Marcas</h4>
+            <ul>
+                <li><a href="#">Molitalia</a></li>
+                <li><a href="#">Pomarola</a></li>
+                <li><a href="#">3 Ositos</a></li>
+                <li><a href="#">Fanny</a></li>
+                <li><a href="#">Costa</a></li>
+                <li><a href="#">Ambrosoli</a></li>
+                <li><a href="#">Todinno</a></li>
+                <li><a href="#">Mimaskot</a></li>
+            </ul>
+        </section>
+
+        <section class="footer-column">
+            <h4>Contacto</h4>
+            <p>clientes@molitalia.com.pe</p>
+            <p>Tel: 0 800 18420</p>
+            <ul>
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Política de Cookies</a></li>
+            </ul>
+        </section>
+
+    </footer>
+
+    <script src="logica/recetario.js"></script>
+
+</body>
+
+</html>
