@@ -305,11 +305,38 @@ footer {
     display: flex;
 }
 
+@keyframes cambioColor {
+    0% {
+        color: @verde;
+        text-shadow: 0 0 15px rgba(14, 114, 22, 0.8);
+    }
+
+    25% {
+        color: rgb(0, 0, 182);
+        text-shadow: 0 0 15px rgba(14, 37, 114, 0.8);
+    }
+
+    50% {
+        color: rgb(167, 151, 10);
+        text-shadow: 0 0 15px rgba(189, 177, 19, 0.8);
+    }
+
+    75% {
+        color: @red;
+        text-shadow: 0 0 15px rgba(114, 14, 14, 0.8);
+    }
+
+    100% {
+        color: @verde;
+        text-shadow: 0 0 15px rgba(14, 114, 22, 0.8);
+    }
+}
+
 #titulo-receta {
-    color: #DB3741;
     font-size: 30px;
     font-weight: bolder;
     margin: 20px auto;
+    animation: cambioColor 4s infinite;
 }
 
 .receta-encabezado {
