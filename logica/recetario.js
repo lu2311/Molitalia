@@ -107,9 +107,7 @@ corazones.forEach(corazon => {
         let rating = corazon.getAttribute('data-corazon');
         corazones.forEach((c, index) => {
             if (index < rating) {
-                c.style.color = 'crimson';
-            } else {
-                c.style.color = '';
+                c.classList.add('corazon-brillante');
             }
         });
     });
@@ -128,7 +126,7 @@ corazones.forEach(corazon => {
     corazon.addEventListener('mouseout', () => {
         corazones.forEach(c => {
             if (!c.classList.contains('seleccionado')) {
-                c.style.color = '';
+                c.classList.add('corazon-brillante');
             }
         });
     });
