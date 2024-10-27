@@ -9,6 +9,7 @@
 @receta2: url(../imagenes/receta22.jpg);
 @receta3: url(../imagenes/receta33.jpg);
 @receta4: url(../imagenes/receta44.jpeg);
+@santa: url(../imagenes/santa-claus.png);
 
 * {
     padding: 0;
@@ -159,14 +160,19 @@ footer {
 }
 
 .santa-claus {
-    height: 70px; /* Ajusta la altura según sea necesario */
+    background-image: @santa;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 70px;
     position: absolute;
-    top: 33%; /* Mantiene a Santa en la parte superior */
-    left: 0; /* Comienza en el borde izquierdo */
+    top: 33%;
+    left: 0;
     animation-name: jump;
-    animation-duration: 5000ms; /* Duración de la animación */
-    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* Curva de Bézier personalizada */
-    animation-iteration-count: infinite; /* Repite la animación indefinidamente */
+    animation-duration: 5000ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-iteration-count: infinite;
+    border: none;
 }
 
 #receta-seleccionada.ocultar {
@@ -635,6 +641,7 @@ footer {
         ul {
             li {
                 font-size: 14px;
+                margin: 1% 15px;
             }
         }
     }
