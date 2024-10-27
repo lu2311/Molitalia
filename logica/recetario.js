@@ -4,7 +4,7 @@ const recetas = {
         dificultad: "Fácil",
         porciones: 20,
         duracion: "1 hora",
-        imagen: "../imagenes/receta1.png",
+        imagen: "/imagenes/receta1.png",
         pasos: [
             "En un bol, tamiza la harina, añade la mantequilla a temperatura ambiente y mezcla hasta obtener una masa arenosa.",
             "Incorpora el azúcar, el huevo y la esencia de vainilla, mezclando bien.",
@@ -18,7 +18,7 @@ const recetas = {
         dificultad: "Fácil",
         porciones: 15,
         duracion: "1h 30min",
-        imagen: "../imagenes/receta2.png",
+        imagen: "/imagenes/receta2.png",
         pasos: [
             "Derrite el chocolate con la crema de leche y la mantequilla a baño maría o en el microondas.",
             "Mezcla bien hasta obtener una crema suave. Deja enfriar a temperatura ambiente y luego refrigera por 1 hora.",
@@ -32,7 +32,7 @@ const recetas = {
         dificultad: "Media",
         porciones: 8,
         duracion: "3h",
-        imagen: "../imagenes/receta3.png",
+        imagen: "/imagenes/receta3.png",
         pasos: [
             "Disolver la levadura en la leche tibia y dejar reposar 10 minutos.",
             "Mezclar la harina, azúcar y la levadura disuelta. Agregar los huevos y la esencia de vainilla. Amasar bien.",
@@ -46,7 +46,7 @@ const recetas = {
         dificultad: "Media",
         porciones: 8,
         duracion: "3h",
-        imagen: "../imagenes/receta4.png",
+        imagen: "/imagenes/receta4.png",
         pasos: [
             "Precalienta el horno a 180°C. Bate los huevos con el azúcar hasta que dupliquen su tamaño.",
             "Tamiza la harina y el cacao, e incorpóralos suavemente a la mezcla de huevos y azúcar.",
