@@ -126,7 +126,7 @@ corazones.forEach(corazon => {
     corazon.addEventListener('mouseout', () => {
         corazones.forEach(c => {
             if (!c.classList.contains('seleccionado')) {
-                c.classList.add('corazon-brillante');
+                c.classList.remove('corazon-brillante');
             }
         });
     });
