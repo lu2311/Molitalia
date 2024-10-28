@@ -22,7 +22,6 @@ window.onload = function() {
     const pVision = document.getElementById("textoVision");
 
     escribirTexto(pMision, textoMision, 15, function() {
-        pVision.style.display = 'block'; // Muestra el texto de visión
         escribirTexto(pVision, textoVision, 15); // Empieza a escribir la visión solo después de que la misión termina
     });
 };
