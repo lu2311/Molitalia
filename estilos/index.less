@@ -1,0 +1,423 @@
+@verde: rgb(1, 98, 60);
+@red: #DB3741;
+@white: white;
+@gris: #f4f4f4;
+@logo: url(../imagenes/logo.png);
+@alimentos: url(../imagenes/alimentos.png);
+@confites: url(../imagenes/confites.png);
+@mascotas: url(../imagenes/mascotas.png);
+@panetones: url(../imagenes/panetones.jpg);
+@gristransparente: rgba(255, 255, 255, 0.514);
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins';
+}
+
+header {
+    background-color: @verde;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+
+    .logo {
+        background-image: @logo;
+        width: 250px;
+        margin-top: 20px;
+        margin-top: 20px;
+        height: 50px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: pulso 1.5s infinite;
+    }
+    
+    @keyframes pulso {
+        0% {
+            transform: scale(.8);
+        }
+        50% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(.8);
+        }
+    }
+
+}
+
+
+
+nav {
+    padding-top: 10px;
+    background-color: @verde;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;    
+
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        flex-wrap: wrap;
+
+        li {
+            text-align: center;
+            color: @white;
+            font-size: 18px;
+            padding: 1% 30px;
+
+
+            
+            a {
+                text-decoration: none;
+                color: inherit;                              
+            }
+
+            a:hover {
+                color: @red;
+                text-shadow: -6px -6px 8px black;
+                font-weight: bolder;
+                font-size: 19px; 
+                }
+
+
+        }
+
+        li:hover {
+            background-color: #529050;
+        }
+    }
+}
+
+.media-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 100%;
+
+    .text-content,
+    .video-content {
+        padding: 20px;      
+
+        &.text-content {
+            max-width: 50%;
+        }
+
+        &.video-content {
+            max-width: 100%;
+        }
+
+        iframe {
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.map {
+    filter: grayscale(100%) invert(92%) contrast(93%);
+    margin-bottom: 0;
+    margin-top: 70px;
+   overflow: hidden;
+    transition: transform 0.5s ease; 
+    max-width: 100%;
+}
+
+.map:hover {
+    filter: none;
+    transform: scale(2.5); /* Aumenta el tamaño ligeramente en hover */
+}
+
+.category-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: @gris;
+    max-width: 100%;
+    padding: 20px 0;
+    margin: 5% 0;    
+    
+
+    
+    article {
+        text-align: center;
+        position: relative;
+        max-width: 100%;
+        margin: 10px 0;
+        /* Necesario para la animación en movimiento */
+
+        .img1 {
+            background-image: @alimentos ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 350px;            
+            max-width: 90%;
+            height: 200px;
+            padding: 15px;
+            filter: grayscale(100%);
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+            /* Transición suave para el hover */
+        }
+
+        .img2 {
+            background-image: @confites ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 350px;
+            max-width: 90%;
+            height: 200px;
+            padding: 15px;
+            filter: grayscale(100%);
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+            /* Transición suave para el hover */
+        }
+
+        .img3 {
+            background-image: @mascotas ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 350px;
+            max-width: 90%;
+            height: 200px;
+            padding: 15px;
+            filter: grayscale(100%);
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+            /* Transición suave para el hover */
+        }
+
+        .img4 {
+            background-image: @panetones ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 350px;
+            max-width: 90%;
+            height: 200px;
+            padding: 15px;
+            filter: grayscale(100%);
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+            /* Transición suave para el hover */
+        }
+
+        figcaption {
+            margin-top: 10px;
+        }
+
+        h2 {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: @red;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 10px;
+        }
+    }
+}
+
+@keyframes go-left-right {
+    0% {
+        transform: translateX(-30px);
+    }
+
+    50% {
+        transform: translateX(30px);
+    }
+
+    100% {
+        transform: translateX(-30px);
+    }
+}
+
+@keyframes cambioColor {
+    0% {
+        color: @verde;
+    }
+    100% {
+        color: @red;
+    }
+}
+
+.category-menu {
+   
+    article:hover {
+
+        transform: skew(0deg, -3deg);
+
+        img,
+        .img1,
+        .img2,
+        .img3,
+        .img4 {
+            animation: go-left-right 2s linear infinite;            
+            filter: none;
+            box-shadow: -5px -5px 7px rgba(0, 0, 0, 0.3);            
+        }
+
+        h2 {
+            font-size: 22px;
+            letter-spacing: 1px;  
+            text-shadow: -3px -3px 4px gray; 
+            animation: cambioColor 1s infinite alternate;
+        }
+
+        a {
+            color: @verde;            
+            text-shadow: -3px -3px 7px @verde;            
+            font-size: 22px;            
+        }
+    }
+}
+
+
+
+.sostenibilidad {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra el contenido verticalmente */
+    margin: 70px 0px;
+    padding: 60px 150px;
+    height: 500px;
+    background-image: url(../imagenes/trigo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+    p {
+        background-color: @gristransparente;
+        color: @verde;
+        font-size: 32px;
+        text-align: center;
+        padding: 20px;
+        font-weight: bold;
+        width: 1200px;
+        max-width: 100%;       
+
+        &.texto {
+            font-size: 20px;
+        }
+    }
+
+}
+
+footer {
+    background-color: @verde;
+    color: @white;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0.5rem 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0;
+
+
+
+    h4 {
+        font-size: 20px;
+        margin: 0 0 1rem 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            font-size: 16px;
+            margin-bottom: 0.5rem;
+
+            a {
+                text-decoration: none;
+                color: inherit;
+                padding: 0.2rem 0;
+            }
+        }
+    }
+
+    .footer-column {
+        flex: 1 0 20%;
+        margin: 0.5rem;
+        min-width: 150px;
+        padding: 0 10px;
+
+        .img-footer {
+            background-image: @logo;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 150px;
+            height: 150px;
+            margin: 0 2rem;
+        }
+    }
+
+
+   
+}
+
+@media screen and (max-width: 600px) {
+    .category-menu {
+        article {
+            img {
+                height: 100px;
+            }
+        }
+    }
+
+    nav {
+        ul {
+            li {
+                font-size: 14px;
+                margin: 1% 15px;
+            }
+        }
+    }
+
+
+    &.video-content {
+        height: 250px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        ul {
+            li {
+                font-size: 14px;
+            }
+        }
+    }
+}

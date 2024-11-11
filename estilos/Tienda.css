@@ -1,0 +1,227 @@
+body {
+  overflow-x: hidden;
+  font-family: 'Poppins';
+  margin: 0;
+  background-color: #f5f5f5;
+}
+header {
+  background-color: #01623c;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 2.5%;
+}
+header img {
+  margin-top: 1%;
+  content: url('https://www.molitalia.com.pe/wp-content/uploads/2020/09/Logo.png');
+}
+header .cart {
+  align-self: center;
+}
+header .cart a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+.search-bar {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.search-bar select {
+  padding: 10px;
+  border: 1px solid #01623c;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.search-bar input {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #01623c;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #01623c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+nav {
+  background-color: #01623c;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  flex-wrap: wrap;
+}
+nav ul li {
+  padding: 0.3rem 1rem;
+  color: white;
+  font-size: 18px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+nav ul li a:hover {
+  color: red;
+}
+.productos {
+  padding: 40px;
+  text-align: center;
+}
+.productos h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+.productos .product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+.productos .product-list article {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  padding: 20px;
+  text-align: center;
+}
+.productos .product-list article figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  max-width: 200px;
+  display: block;
+}
+
+.productos .product-list article:hover {
+  transform: translateY(-5px);
+}
+.productos .product-list article figure {
+  margin: 0;
+}
+.productos .product-list article figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  max-width: 200px;
+}
+.productos .product-list article figure figcaption {
+  margin-top: 15px;
+}
+.productos .product-list article figure figcaption h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.productos .product-list article figure figcaption p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #01623c;
+  font-weight: bold;
+}
+.productos .product-list article figure figcaption a {
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+}
+.productos .product-list article:nth-child(1) img {
+  content: url('https://www.molitalia.com.pe/wp-content/uploads/2020/09/3D-MOLITALIA-SPAGHETTI-1KG_FB.jpg');
+}
+.productos .product-list article:nth-child(2) img {
+  content: url('https://www.molitalia.com.pe/wp-content/uploads/2020/09/dummie-sixpack-frac-clasica-427x427px-web-1.jpg');
+}
+.productos .product-list article:nth-child(3) img {
+  content: url('https://www.molitalia.com.pe/wp-content/uploads/2020/09/dummie-env-queso-crackelet-47g-427x427-px-web.jpg');
+}
+.productos .product-list article:nth-child(4) img {
+  content: url('https://www.molitalia.com.pe/wp-content/uploads/2020/09/3-Ositos-Avena-Cereales-Andinos-170-g-3D.jpg');
+}
+.productos .product-list article:nth-child(5) img {
+  content: url('https://www.molitalia.com.pe/wp-content/uploads/2020/09/427x427-estuche-cereal-bar-durazno.jpg');
+}
+.productos .product-list article:nth-child(6) img {
+  content: url('https://www.molitalia.com.pe/wp-content/uploads/2020/09/3D-MOLITALIA-SPAGHETTI-1KG_FB.jpg');
+}
+.productos .product-list article:nth-child(7) img {
+  content: url('https://www.molitalia.com.pe/wp-content/uploads/2020/09/3D-MOLITALIA-SPAGHETTI-1KG_FB.jpg');
+}
+.productos .product-list article:nth-child(8) img {
+  content: url('https://www.molitalia.com.pe/wp-content/uploads/2020/09/3-Ositos-Avena-Cereales-Andinos-170-g-3D.jpg');
+}
+.productos .product-list article:nth-child(9) img {
+  content: url('https://www.molitalia.com.pe/wp-content/uploads/2020/09/3D-MOLITALIA-SPAGHETTI-1KG_FB.jpg');
+}
+.productos .product-list article:nth-child(10) img {
+  content: url('https://www.molitalia.com.pe/wp-content/uploads/2020/09/427x427-estuche-cereal-bar-durazno.jpg');
+}
+footer {
+  background-color: #01623c;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+footer img {
+  width: 100px;
+  margin: 0 2rem;
+}
+footer h4 {
+  margin-bottom: 1rem;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+footer ul li {
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+footer ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+footer .footer-column {
+  flex: 1 0 20%;
+  min-width: 150px;
+}
+#add-to-cart {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition-duration: 1s;
+  font-size: 16px;
+}
+
+#Texto-movimiento {
+  font-size: 36px;
+  position: absolute;
+  white-space: nowrap;
+  animation: move 13s linear infinite;
+  left: 0; 
+}
+
+@keyframes move {
+  0% {
+    left: 0%; /* Comienza en el borde izquierdo */
+  }
+  50% {
+    left: 57%; 
+  }
+  100% {
+    left: 0%; /* Regresa al borde izquierdo */
+  }
+}
+
